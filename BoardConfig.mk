@@ -21,6 +21,10 @@ DEVICE_PATH := device/xiaomi/marble
 # Assert
 TARGET_OTA_ASSERT_DEVICE := marble,marblein
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_marble
+TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_marble
+
 # Kernel modules
 BOOT_KERNEL_MODULES += \
     qcom_pm8008-regulator.ko \
