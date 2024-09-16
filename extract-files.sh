@@ -15,6 +15,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
+        vendor/etc/sensors/hals.conf)
+            [ "$2" = "" ] && return 0
+            grep -q "sensors.xiaomi.v2.so" "${2}" || sed -i '$s/$/\nsensors.xiaomi.v2.so/' "${2}"
+            ;;
         vendor/lib64/hw/audio.primary.taro-marble.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --set-soname "audio.primary.taro-marble.so" "${2}"
