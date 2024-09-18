@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_marble.mk
+    $(LOCAL_DIR)/mist_marble.mk
+
+COMMON_LUNCH_CHOICES := \
+    mist_marble-user \
+    mist_marble-userdebug \
+    mist_marble-eng

@@ -7,10 +7,24 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common Mist configuration
+$(call inherit-product, vendor/mist/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_marble
+# Mist Build stuff
+WITH_GAPPS := true
+TARGET_SUPPORTS_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
+MIST_CHIPSET := SM7475
+MIST_BATTERY := 5000mah
+MIST_DISPLAY := 1080x2400
+TARGET_DISABLE_EPPE := true
+
+# Maintainer stuff
+MIST_BUILD_TYPE := UNOFFICIAL
+MIST_MAINTAINER := Mauls
+
+PRODUCT_NAME := mist_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
