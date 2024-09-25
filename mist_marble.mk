@@ -11,7 +11,7 @@ $(call inherit-product, device/xiaomi/marble/device.mk)
 $(call inherit-product, vendor/mist/config/common_full_phone.mk)
 
 # Mist Build stuff
-WITH_GAPPS := true
+WITH_GAPPS := false
 TARGET_SUPPORTS_BLUR := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_LAUNCHER := false
