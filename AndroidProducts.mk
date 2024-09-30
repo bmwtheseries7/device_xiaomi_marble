@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mist_marble.mk
+    $(LOCAL_DIR)/afterlife_marble.mk
 
 COMMON_LUNCH_CHOICES := \
-    mist_marble-user \
-    mist_marble-userdebug \
-    mist_marble-eng
+    afterlife_marble-user \
+    afterlife_marble-userdebug \
+    afterlife_marble-eng

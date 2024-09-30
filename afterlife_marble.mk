@@ -7,24 +7,17 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common Mist configuration
-$(call inherit-product, vendor/mist/config/common_full_phone.mk)
+# Inherit from common AfterlifeOS configuration
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
-# Mist Build stuff
-WITH_GAPPS := false
-TARGET_SUPPORTS_BLUR := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_PIXEL_LAUNCHER := false
-MIST_CHIPSET := SM7475
-MIST_BATTERY := 5000mah
-MIST_DISPLAY := 1080x2400
-TARGET_DISABLE_EPPE := true
+AFTERLIFE_MAINTAINER := Mauls
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# Maintainer stuff
-MIST_BUILD_TYPE := UNOFFICIAL
-MIST_MAINTAINER := Mauls
+# Device configs
+TARGET_BOOT_ANIMATION_RES = 1080
+TARGET_UDFPS_ANIMATIONS := true
 
-PRODUCT_NAME := mist_marble
+PRODUCT_NAME := afterlife_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 
