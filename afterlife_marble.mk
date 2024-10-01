@@ -7,10 +7,15 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AfterlifeOS configuration
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_marble
+# AfterLife flags
+AFTERLIFE_MAINTAINER := Mauls
+TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+PRODUCT_NAME := afterlife_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
